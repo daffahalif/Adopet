@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ccat"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/btn_tertiary"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="45dp"
+                android:text="cat"
+                android:textColor="#4B3588"
+                android:textStyle="bold"
+                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ddog"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_tertiary"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="45dp"
+                android:text="dog"
+                android:textColor="#4B3588"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/pet_listview"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:paddingTop="36dp"
+            android:paddingBottom="36dp"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="16dp"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="20dp">-->
+
+<!--            <View-->
+<!--                android:id="@+id/view1"-->
+<!--                android:layout_width="355dp"-->
+<!--                android:layout_height="170dp"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/view"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/photo"-->
+<!--                android:layout_width="164dp"-->
+<!--                android:layout_height="188dp"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:background="@drawable/cat3"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/petname"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:text="Grath"-->
+<!--                android:textColor="#4B3588"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintLeft_toRightOf="@id/photo"-->
+<!--                app:layout_constraintTop_toTopOf="@id/view1" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/doglogo"-->
+<!--                android:layout_width="18dp"-->
+<!--                android:layout_height="18dp"-->
+<!--                android:layout_margin="12dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@drawable/koceng"-->
+<!--                app:layout_constraintRight_toLeftOf="@+id/fem"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/view1"-->
+<!--                tools:ignore="MissingConstraints"-->
+<!--                tools:layout_editor_absoluteX="331dp" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/fem"-->
+<!--                android:layout_width="12dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_margin="12dp"-->
+<!--                android:background="@drawable/female"-->
+<!--                app:layout_constraintRight_toRightOf="@id/view1"-->
+<!--                app:layout_constraintTop_toTopOf="@id/view1" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/details"-->
+<!--                style="?android:attr/buttonStyleSmall"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:background="@drawable/btn_bg"-->
+<!--                android:text="Details"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="10sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/view1"-->
+<!--                app:layout_constraintLeft_toRightOf="@id/photo"-->
+<!--                app:layout_constraintRight_toRightOf="@id/view1" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        &lt;!&ndash;&ndash;&gt;-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addBtn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/home_addpet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_ic"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Add Pet"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

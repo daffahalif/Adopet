@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileUpdate">
+
+    <TextView
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purpy7"
+        android:gravity="center"
+        android:text="UPDATE PROFILE"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:itemIconSize="20dp"
+        app:itemRippleColor="#C10E0E"
+        app:itemTextColor="#ffffff"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@null"
+        android:src="@drawable/back_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/uname"
+                android:layout_width="355dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/form"
+                android:drawablePadding="10dp"
+                android:hint="Username"
+                android:paddingLeft="16dp"
+                android:textSize="14dp"
+                android:inputType="text"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Username"
+                android:textColor="#5C4994"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/uname"
+                app:layout_constraintBottom_toTopOf="@id/uname"
+                tools:layout_editor_absoluteX="28dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="355dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/form"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingLeft="16dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@id/uname"
+                app:layout_constraintTop_toBottomOf="@+id/uname"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/passText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Password"
+                android:textColor="#5C4994"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/password"
+                app:layout_constraintBottom_toTopOf="@id/password"
+                tools:layout_editor_absoluteX="28dp"
+                tools:ignore="MissingConstraints" />
+
+
+
+            <TextView
+                android:id="@+id/phonee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Phone Number"
+                android:textColor="#5C4994"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/phone"
+                app:layout_constraintBottom_toTopOf="@+id/phone"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="28dp" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="355dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/form"
+                android:drawablePadding="10dp"
+                android:hint="081-xxx-xxx"
+                android:paddingLeft="16dp"
+                android:textSize="14dp"
+                android:inputType="phone"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel_button"
+                android:layout_width="101dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginVertical="40dp"
+                android:background="@drawable/btn_secondary"
+                android:backgroundTint="#C2C2C2"
+                android:text="Cancel"
+                android:textColor="#fff"
+                app:layout_constraintTop_toBottomOf="@+id/phone"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="645dp"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/updateBtn"
+                android:layout_width="101dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginVertical="40dp"
+                android:background="@drawable/btn_primary"
+                android:backgroundTint="#5C4994"
+                android:text="Update"
+                android:textColor="#fff"
+                app:layout_constraintTop_toBottomOf="@+id/phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="645dp"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/pet_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:clickable="false"
+        android:visibility="gone"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/acc_id"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="0"/>
+
+    <View
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/view1"
+        android:layout_width="355dp"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_photo"
+        android:layout_width="164dp"
+        android:layout_height="188dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cat3"
+        app:shapeAppearanceOverlay="@style/roundimageview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_name"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Grath"
+        android:textColor="#4B3588"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/pet_photo"
+        app:layout_constraintTop_toTopOf="@id/view1" />
+
+    <TextView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Persian"
+        android:background="@drawable/btn_secondary"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:layout_margin="6dp"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/pet_photo"
+        app:layout_constraintTop_toBottomOf="@id/pet_name"/>
+
+    <TextView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 Months"
+        android:background="@drawable/btn_secondary"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:layout_margin="6dp"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/pet_type"
+        app:layout_constraintTop_toBottomOf="@id/pet_name"/>
+
+    <TextView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_address"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_location"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/pet_photo"
+        android:text="Desa nasi goreng, kecamatan bakpao"
+        app:layout_constraintTop_toBottomOf="@id/pet_type"/>
+
+    <View
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_category"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/anying"
+        android:backgroundTint="@color/purpy10"
+        app:layout_constraintRight_toLeftOf="@+id/pet_sex"
+        app:layout_constraintTop_toTopOf="@+id/view1"
+         />
+
+    <ImageView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_person"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:textColor="@color/black"
+        android:src="@drawable/ic_person"
+        android:background="@drawable/btn_secondary"
+        android:padding="4dp"
+        android:layout_marginStart="6dp"
+        app:layout_constraintLeft_toRightOf="@+id/pet_age"
+        app:layout_constraintTop_toTopOf="@+id/pet_age"
+        />
+
+    <ImageView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/pet_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/female"
+        app:layout_constraintRight_toRightOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/details"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/btn_bg"
+        android:text="Details"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintLeft_toRightOf="@id/pet_photo"
+        app:layout_constraintRight_toRightOf="@id/view1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
